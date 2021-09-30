@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <div>
+        <div>
+            <h1>Applications box</h1>
+                <div>
+                    <label for="nameI" class="form-label">Enter name</label>
+                    <input type="text" id="nameI" class="form-control">
+                </div>
+                <div>
+                    <label for="titleI" class="form-label">Enter title</label>
+                    <input type="text" id="titleI" class="form-control">
+                </div>
+                <div>
+                    <label for="contentI" class="form-label">Enter description</label>
+                    <textarea id="contentI" class="form-control"></textarea>
+                </div>
+                <button class="btn btn-success mt-3" onclick="blogPost()">Access</button>
+                <button class="btn btn-primary mt-3" onclick="getList()">Get Applications List</button>
+        </div>
+        <div class="row mt-3" id="list">
+
+        </div>
+    </div>
+</div>
+</body>
+<script th:inline="javascript" th:src="@{/js/main.js}" src="../static/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</html>
